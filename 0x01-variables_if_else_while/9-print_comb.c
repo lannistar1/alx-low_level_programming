@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints the numbers in base 16
+ * main - prints all combination of single digits
  * Return: Always 0
  */
 int main(void)
