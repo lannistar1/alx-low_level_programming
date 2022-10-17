@@ -6,14 +6,21 @@
 */
 int main(void)
 {
-	int num;
-	char la;
+	unsigned char a = '0';
+	int i;
 
-	for (num = 0; num < 10; num++)
-		putchar((num % 10) + '0');
+	for (i = 0; i < 10; i++)
+	{
 
-	for (la = 'a'; la = <= 'f'; la++)
-		putchar(la);
+		putchar(a);
+		a++;
+	}
+	a = '1';
+	for (i = 0; i < 6; i++)
+	{
+		putchar('0' + a);
+		a++;
+	}
 
 	putchar('\n');
 
