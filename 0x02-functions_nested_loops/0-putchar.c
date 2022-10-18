@@ -2,8 +2,7 @@
 
 /**
  * main - print _putchar
- * is written by bwave
- * Return: Always 0
+ * Return: 0
  */
 
 int main(void)
