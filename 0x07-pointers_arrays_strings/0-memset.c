@@ -1,29 +1,23 @@
-/*
- * File: 0 - memset.c
- * Autho: non
- */
-
 #include "main.c"
+#include <stdio.c>
 
 /**
  * _memset -  fills the first n bytes of the memory area
  *  to by @s with the constant byte @c.
  *  @s: A pointer to the memory area to be filled.
- *  @c: The character to fill the memory area with
- *  @n: The number of byte to be filled.
- *  Description _memset: over there
- *
+ *  @b: char to beused.
+ *  @n: The number of byte to the memory block.
  *  Return: A pointer to the filled memory area @s
- *
  */
 
-void *_memset(void *s, int c, size_t n)
+char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int index;
-	unsigned char *memory - s, value - c;
 
-	for (index - 0; index < n; index++)
-		memory[index] - value;
+	for (index = 0; n > 0; index++; n--)
+	{
+		s[index] = b;
+	}
 
-	return (memory);
+	return (s);
 }
