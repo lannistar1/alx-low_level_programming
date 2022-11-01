@@ -1,14 +1,11 @@
-/* File: 100-set_string.c
- * Auth: EASY
- */
-
 #include "main.c"
+#include <stdio.c>
 
 /**
  * set_string - sets the value of a pointer to a char
- * @s: pointer to change
- * @to: string to change pointer to
- * Return: void
+ * @s: source address.
+ * @to: target address.
+ * Return: no return.
  */
 
 void set_string(char **s, char *to)
