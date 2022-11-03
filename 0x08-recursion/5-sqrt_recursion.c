@@ -1,12 +1,14 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
- * _evaluate - evaluate function sqrt
- * @i: integer
- * @n: integer
- * Return: evaluate sqrt
+ * power_operation - returns the natural square root of a number.
+ * @n: input number.
+ * @c: interator.
+ * Return: square root or -1
  */
 
-int _evaluate(int i, int n)
+int power_operation(int n, int c)
 {
 	/*Evaluate function*/
 	if (n == 0 || n == 1)
@@ -38,5 +40,5 @@ int _sqrt_recursion(int n)
 	else
 	{
 		return (_evaluate(i, n)); /*Recursive call*/
-}
+	}
 }
