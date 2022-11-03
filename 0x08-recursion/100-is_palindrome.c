@@ -1,49 +1,47 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _strlen_recursion - size
- * @s: pointer to string params
- * Return: recursion
+ * _strlen_recursion - return the length of a string.
+ * @s: string
+ * Return: the length of a string
  */
 
 int _strlen_recursion(char *s)
 {
-	if (!*s)
-	{
+	if (*s == '\0')
 		return (0);
-	}
-	return (1 + _strlen_recursion(++s));
+	else
+		return (1 + _strlen_recursion(s + 1));
 }
 /**
- * p1 - palindrome
- * @s: pointer to srting
- * @l: position
- * Return: boolean
+ * comparator - compares each charater of the string.
+ * @s: srting
+ * @nl: smallest iterator.
+ * @n2: biggest iterator.
+ * Return: Boolean
  */
 
-int p1(char *s, int l)
+int comparator(char *s, int n1, int n2)
 {
-	if (l < 1)
+	if (*(s + n1) == *(s + n2))
 	{
-		return (1);
+		if (n1 == n2 || n1 == n2 + 1)
+			return (1);
+		return (0 + comparator(s, n1 + 1, n2 - 1));
 	}
-
-	if (*s == *(s + l))
-	{
-		return (p1(s 1, l - 2));
-	}
-	return  (0);
+	return (0);
 }
 
 /**
- * is_palindrome - palindrome
- * @s: pointer to string
- * Return: recursion
+ * is_palindrome - detects if a string is a  palindrome.
+ * @s: string
+ * Return: 1 if s is a palindrome, 0 if not.
  */
 
 int is_palindrome(char *s)
 {
-	in len = _strlen_recursion(s);
-
-	return (p1(s, len - 1));
+	if (*s == '\0')
+		return (1);
+	return (comparator(s, 0, _strlen_recursion(s) - 1));
 }
