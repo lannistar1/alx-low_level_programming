@@ -1,16 +1,13 @@
-/*
- * file: 1-print_rev_recursion.c
- * Auth: sam
- */
-
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _print_rev_recursion - prints a string is reverse.
- * @s: The string to be printed.
+ * _print_rev_recursion - prints a string in reverse.
+ * @s: string
+ * Return: no return.
  */
 
-void _print_rev_recursion(char *s)
+void _print_rev_recursion(char *s);
 {
 	if (*s != '\0')
 	{
