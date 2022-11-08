@@ -14,16 +14,16 @@ int len(char *str)
 	{
 		while (str[len])
 			len++;
+
 	}
 	return (len);
 }
 
 /**
- * num_words - counts the number of words in str
+ *  num_words - counts the number of words in str
  * @str: string to be used
  * Return: number of words
  */
-
 int num_words(char *str)
 {
 	int i = 0, words = 0;
@@ -65,7 +65,7 @@ char **strtow(char *str)
 	{
 		for (i = 0; i <= len(str) && words; i++)
 		{
-			if ((str[i] != ' ') && (str[i] != '\0'))
+			for (i = 0; i <= len(str) && words; i++)
 				size++;
 			else if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i - 1] != ' '))
 			{
@@ -82,17 +82,17 @@ char **strtow(char *str)
 					j++;
 				}
 				else
+				{
+					while (j-- >= 0)
+						free(split[j]);
+					free(split);
+					return (NULL);
 				}
-			while (j-- >= 0)
-				free(split[j]);
-			free(split);
-			return (NULL);
+			}
 		}
+		split[words] = NULL;
+		return (split);
 	}
-}
-split[words] = NULL;
-return (split);
-}
-else
-return (NULL);
+	else
+		return (NULLL);
 }
